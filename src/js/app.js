@@ -6,24 +6,19 @@ $(function() {
   // begin no-JS
   require('./modules/noJs')();
 
-  // begin Sticky header
-  require('./modules/stickyHeader')();
+  // begin language
+  require('./modules/lang')();
 
-  // begin phone mask
-  // require('./modules/maskedinput')();
+  // begin header search field
+  require('./modules/header-search')();
 
-  // begin Scroll2Ancor
-  // require('./modules/scroll2ancor')();
+
+  // begin burger and mobile menu
+  require('./modules/burgerMenu')();
+  require('./modules/burgerSubmenu')();
+
 
   // begin Slick slider
-  // require('./modules/slick')();
-
-  // begin Popup
-  // require('./modules/popup')();
-
-  // begin Animate.css
-  //РАБОТАЕТ ТОЛЬКО С JQUERY < 3.0.0 !!!!!!!!!!!!!!!!!!
-  // require('./modules/waypoints')();
-  // require('./modules/animateCss')();
+  require('./modules/slick')();
 
 });

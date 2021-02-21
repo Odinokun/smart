@@ -1,0 +1,19 @@
+mixin index-actual__item(text, newprice, oldprice)
+  li.index-actual__item
+    a(href="#").index-actual__link
+      .index-actual__text #{text}
+      .index-actual__price
+        .index-actual__price-new #{newprice}
+        .index-actual__price-old #{oldprice}
+
+//begin index-actual
+.index-actual
+  .container
+    h2.title-48.title-section Актуальне
+    ul.index-actual__list
+      +index-actual__item('Консультація сімейного лікаря', '490 грн')
+      +index-actual__item('Консультація ЛОРа', '490 грн')
+      +index-actual__item('Консультація педіатра', '490 грн')
+      +index-actual__item('УЗД внутрішніх органів', '590 грн')
+      +index-actual__item('Медична книжка для жінки', '1290 грн')
+//end index-actual

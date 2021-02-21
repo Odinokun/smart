@@ -1,0 +1,19 @@
+mixin index-actual__item(text, newprice, oldprice)
+  li.index-actual__item
+    a(href="#").index-actual__link
+      .index-actual__text #{text}
+      .index-actual__price
+        .index-actual__price-new #{newprice}
+        .index-actual__price-old #{oldprice}
+
+//begin index-actual
+.index-actual
+  .container
+    h2.title-48.title-section Пропозиції місяця
+    ul.index-actual__list
+      +index-actual__item('Кардіологічний Check up', '990 грн', '1200')
+      +index-actual__item('Консультація дитячого  імунолога', '390 грн', '490')
+      +index-actual__item('Вакцинація Ваксігрип Тетра', '790 грн', '1200')
+      +index-actual__item('Лікувальний масаж спини 5 сеансів', '1900 грн', '2500')
+      +index-actual__item('Доплерографія судин', '490 грн', '690')
+//end index-actual

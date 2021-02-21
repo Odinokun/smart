@@ -1,5 +1,86 @@
 //begin header
-header.header#header
+header.header
   .container
-    include ../elements/burger
+    include ../elements/burger-submenu
+
+    //begin logo
+    a(href="/").header__logo
+      img(src="assets/img/logo.svg" alt="smart")
+    //end logo
+
+    //begin header__right
+    .header__right#header__right
+      //begin header__right-row
+      .header__right-row
+        //begin header__item
+        .header__item.header-item
+
+          //begin header__contacts
+          .header__contacts.header-contacts
+            a(href="tel:+380971621688").header-contacts__link
+              +svg('smart')
+              span 097 16 216 88
+            a(href="https://goo.gl/maps/BTUT2QsmjXZBCCbF6" target="_blank" rel="nofollow noopener noreferrer").header-contacts__link
+              +svg('marker')
+              span Як нас знайти
+          //end header__contacts
+
+          //begin header__search
+          form.header__search.header-search
+            input(placeholder='Введіть пошуковий запит').header-search__input
+            button.header-search__btn
+              +svg('search')
+          //end header__search
+
+          .header__search-open
+            +svg('search')
+        //end header__item
+
+        //begin header__socials
+        .header__socials.header-socials
+          a(href="#" target="_blank" rel="nofollow noopener noreferrer").header-socials__link
+            +svg('fb')
+            span Facebook
+          a(href="#" target="_blank" rel="nofollow noopener noreferrer").header-socials__link
+            +svg('inst')
+            span Instagram
+        //end header__socials
+
+        //begin header__langs
+        .header__langs.header-langs
+          ul.header-langs__list
+            li.header-langs__item.active
+              a(href="#").header-langs__link Укр
+            li.header-langs__item
+              a(href="#").header-langs__link Рус
+            li.header-langs__item
+              a(href="#").header-langs__link Eng
+          .header-langs__icon
+            +svg('arr-down')
+        //end header__langs
+      //end header__right-row
+
+      //begin header__right-row
+      .header__right-row
+        //begin header__menu
+        nav.header__menu.header-menu
+          ul.header-menu__list
+            li.header-menu__item
+              a(href="#").header-menu__link Про нас
+            li.header-menu__item
+              a(href="#").header-menu__link Лікарі
+            li.header-menu__item.active
+              a(href="#").header-menu__link Ціни
+            li.header-menu__item
+              a(href="#").header-menu__link Додаток
+        //end header__menu
+
+        //begin header__user
+        a(href="#").header__user.header-user
+          +svg('user')
+          span Моя медична карта
+        //end header__user
+      //end header__right-row
+    //end header__right
+    include ../elements/burger-menu
 //end header

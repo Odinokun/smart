@@ -1,4 +1,48 @@
 //begin footer
-footer.footer(style='background-color:#167;color:#fff;text-align:center;text-transform:uppercase;')
-  h1 footer
+.footer
+  .container
+    //begin footer__left
+    .footer__left.footer-left
+      .footer-left__links.footer-left__links--contacts
+        a(href="#").footer-left__link
+          span Контакти
+        a(href="tel:+380971621688").footer-left__link
+          +svg('smart')
+          span 097 16 216 88
+        span.footer-left__link.footer-left__link--text
+          +svg('clock')
+          span Пн - Сб: 8:00 - 20:00
+      .footer-left__links
+        a(href="https://goo.gl/maps/BTUT2QsmjXZBCCbF6" target="_blank" rel="nofollow noopener noreferrer").footer-left__link
+          +svg('marker')
+          span м. Львів , пр. Червоної Калини, 60, Avalon Up
+
+      .footer-left__links.footer-left__links--social
+        a(href="#" target="_blank" rel="nofollow noopener noreferrer").footer-left__link.footer-left__link--social
+          +svg('fb')
+          span Ми у Facebook
+        a(href="#" target="_blank" rel="nofollow noopener noreferrer").footer-left__link.footer-left__link--social
+          +svg('inst')
+          span Ми в Instagram
+    //end footer__left
+
+    //begin footer__logo
+    .footer__logo.footer-logo
+      a(href="/").footer-logo__link
+        img(src="assets/img/logo-footer.svg" alt="smart")
+    //end footer__logo
+
+    //begin footer__right
+    .footer__right.footer-right
+      .footer-left__apps
+        .footer-left__apps-text Додаток SMART Life Clinic
+        .footer-left__apps-links
+          a(href="#" target="_blank" rel="nofollow noopener noreferrer").footer-left__apps-link
+            img(src="assets/img/app-store.png" alt="picture")
+          a(href="#" target="_blank" rel="nofollow noopener noreferrer").footer-left__apps-link
+            img(src="assets/img/google-play.png" alt="picture")
+
+      .footer-left__copyright
+        span.footer-left__copyright-text &copy; SMART Life Clinic, 2020
+    //end footer__right
 //end footer

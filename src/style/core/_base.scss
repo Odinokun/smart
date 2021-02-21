@@ -14,6 +14,7 @@ body {
 html {
   font-family: $font;
   font-size: 16px;
+  font-weight: 300;
   line-height: 1.38;
   color: $text;
 }
@@ -24,54 +25,48 @@ body {
   min-width: 320px;
 }
 
+
+h1 {
+  @include responsive-font(40, 32);
+}
+
+h2 {
+  @include responsive-font(32, 24);
+}
+
+h3 {
+  @include responsive-font(24, 16);
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: $font-bold;
-  font-weight: 400;
+  font-weight: 300;
+  line-height: 1;
   margin: 0 0 10px 0;
-}
-
-h1 {
-  @include responsive-font(34, 24);
-}
-
-h2 {
-  @include responsive-font(30, 22);
-}
-
-h3 {
-  @include responsive-font(28, 20);
-}
-
-h4 {
-  @include responsive-font(26, 18);
-}
-
-h5 {
-  @include responsive-font(24, 17);
-}
-
-h6 {
-  @include responsive-font(20, 16);
 }
 
 p {
-  margin: 0 0 10px 0;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 0 0 18px 0;
+  color: #1d1d1b;
+
   strong {
-    font-family: $font-bold;
+    font-weight: 600;
   }
 }
 
 a {
-  transition: color $transition-hover;
-  text-decoration: none;
-  color: $link;
+  text-decoration: underline;
+  color: $brand;
+
   &:hover {
-    color: $link-hov;
+    text-decoration: none;
   }
 }
 
@@ -82,23 +77,6 @@ ul {
   }
 }
 
-ul {
-  li {
-    // путь к кастомной картинке пункта ul
-    // list-style-image: url('../img/ul.png');
-  }
-}
-
-//кастомные пункты списка с цифрами
-ol {
-  // list-style: none;
-  // @include counter(li);
-  li::before {
-    // color: $brand;
-  }
-}
-
-input,
 textarea,
 select,
 button {
@@ -107,11 +85,30 @@ button {
 }
 
 input {
-  padding: 3px 10px 5px 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  display: block;
+  height: 48px;
+  margin-bottom: 16px;
+  padding: 7px 24px 5px 24px;
+  transition: .5s;
   color: $text;
-  border: 1px solid $text;
+  border: solid 1px #d1d1d1;
+  border-radius: 25px !important;
+  outline: none !important;
+  background-color: transparent;
 
-  @include placeholder-color($text);
+  @include placeholder-color(#d1d1d1);
+
+  &:hover {
+    border: 1px solid #adc9b8;
+  }
+
+  &:focus {
+    border: 1px solid #004c45;
+  }
 }
 
 textarea {
@@ -129,54 +126,40 @@ svg {
   overflow: visible;
 }
 
-// подсвечиваем картинки без alt и без заполненного alt
-img[alt=''],
-img:not([alt]) {
-  outline: 5px solid tomato;
-}
-
-// исключение для google-map и fancybox
-.fancybox-container img[alt=''],
-.fancybox-container img:not([alt]),
-.gm-style img[alt=''],
-.gm-style img:not([alt]) {
-  outline: none !important;
-}
-
-// тревога, если первый child внутри списка не li и прочие похожие примеры
-ul > *:not(li),
-ol > *:not(li) {
-  outline: 5px solid tomato;
-}
-
-//изменяем цвет выделения текста мышью
-::selection {
-  // background-color: $brand;
-  // color: $brand;
-  // text-shadow: none;
-}
-
 .main-wrap {
   display: flex;
+  //свойство для плавной прокрутки на яблоках
   flex-direction: column;
   height: 100%;
   min-height: 100vh;
-  //свойство для плавной прокрутки на яблоках
 
   -webkit-overflow-scrolling: touch;
-  @include max(1023) {
-    //свойство для исправления бага 100vh для мобильных
-    min-height: -moz-available;
-    min-height: -webkit-fill-available;
-    min-height: fill-available;
-  }
-  &.no-scroll {
-    overflow: hidden;
-  }
 }
 
 .main {
   flex-grow: 1;
+
+  &.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+  }
+}
+
+.main-double {
+  padding-top: 32px;
+
+  .container {
+    display: flex;
+
+    @include max(900) {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  }
+}
+
+.main-double__body {
+  width: 100%;
 }
 
 .container {
@@ -184,5 +167,190 @@ ol > *:not(li) {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 40px;
+
+  @include max(768) {
+    padding: 0 16px;
+  }
+}
+
+.title-section{
+  margin-bottom: 24px;
+  @include max(768) {
+    text-align: center;
+  }
+}
+
+.title-48{
+//.title-40,
+//.title-32,
+//.title-24 {
+  font-weight: 300;
+  color: $brand;
+
+  span {
+    font-weight: 600;
+  }
+}
+
+.title-48{
+  line-height: 1.21;
+  @include responsive-font(48, 32);
+}
+
+//.title-40 {
+//  line-height: 1.25;
+//  margin-bottom: 20px;
+//
+//  @include responsive-font(40, 32);
+//  @include max(680) {
+//    margin-bottom: 16px;
+//  }
+//}
+//
+//.title-32 {
+//  line-height: 1.33;
+//  margin-bottom: 16px;
+//
+//  @include responsive-font(32, 24);
+//  @include max(680) {
+//    margin-bottom: 16px;
+//  }
+//}
+//
+//.title-24 {
+//  @include responsive-font(24, 16);
+//}
+
+//.ul-list {
+//  margin: 0;
+//  padding: 0;
+//
+//  li {
+//    position: relative;
+//    margin-bottom: 22px;
+//    padding-left: 64px;
+//    list-style: none;
+//
+//    @include max(680) {
+//      padding-left: 30px;
+//    }
+//
+//    &::before {
+//      position: absolute;
+//      top: 2px;
+//      left: 30px;
+//      width: 16px;
+//      height: 16px;
+//      content: '';
+//      border: 3px solid #adc9b8;
+//      border-radius: 50%;
+//
+//      @include max(680) {
+//        left: 0;
+//      }
+//    }
+//  }
+//}
+//
+//.ul-list-2 {
+//  margin: 0;
+//  padding: 0;
+//
+//  li {
+//    position: relative;
+//    margin-bottom: 22px;
+//    padding-left: 64px;
+//    list-style: none;
+//
+//    @include max(680) {
+//      padding-left: 30px;
+//    }
+//
+//    &::before {
+//      position: absolute;
+//      top: 2px;
+//      left: 30px;
+//      width: 22px;
+//      height: 16px;
+//      content: '';
+//      border-radius: 50%;
+//      background-image: url('../img/ul.svg');
+//      background-repeat: no-repeat;
+//      background-position: 50% 50%;
+//      background-size: contain;
+//
+//      @include max(680) {
+//        left: 0;
+//      }
+//    }
+//  }
+//}
+//
+//.ol-list {
+//  margin: 0;
+//  padding: 0;
+//  list-style: none;
+//
+//  @include counter(li);
+//
+//
+//  li {
+//    position: relative;
+//    margin-bottom: 22px;
+//    padding-left: 64px;
+//    list-style: none;
+//
+//    @include max(680) {
+//      padding-left: 30px;
+//    }
+//
+//    &::before {
+//      font-size: 24px;
+//      font-weight: 600;
+//      line-height: 1.21;
+//      position: absolute;
+//      top: -5px;
+//      left: 30px;
+//      min-width: 16px;
+//      text-align: center;
+//      color: #adc9b8;
+//
+//      @include max(680) {
+//        left: 0;
+//      }
+//    }
+//  }
+//}
+
+.btn {
+  font-family: 'Montserrat', sans-serif;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 0 24px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color .5s;
+  white-space: nowrap;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px !important;
+  box-shadow: none;
+
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.2;
+  text-align: center;
+
+  height: 48px;
+  background-color: #EDC205;
+  color: $brand;
+
+  &:hover {
+    color: $brand;
+    background-color: #ffd100;
+
+  }
 }

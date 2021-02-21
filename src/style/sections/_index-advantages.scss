@@ -1,0 +1,156 @@
+.index-advantages {
+  .container {
+    padding-bottom: 96px;
+
+    @include max(840) {
+      padding-bottom: 8px;
+    }
+  }
+}
+
+.index-advantages__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 24px 0 0 0;
+
+  @include max(840) {
+    justify-content: space-around;
+    padding-top: 0;
+  }
+}
+
+.index-advantages__item {
+  width: 33.33%;
+  list-style: none;
+
+  @include max(840) {
+    width: 50%;
+  }
+  @include max(540) {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  &:first-child {
+    @include max(840) {
+      margin-right: 10px;
+      margin-bottom: 24px;
+      margin-left: 10px;
+    }
+    @include max(540) {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+}
+
+.index-advantages__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+
+  @include max(540) {
+    flex-direction: row;
+  }
+
+  &:hover {
+    .index-advantages__circle--01 {
+      background-color: #ffda33;
+    }
+
+    .index-advantages__circle--02 {
+      background-color: #8bd8ef;
+    }
+
+    .index-advantages__circle--03 {
+      background-color: #3b81af;
+    }
+
+    .index-advantages__text {
+      color: #0b629b;
+    }
+  }
+}
+
+.index-advantages__circle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 160px;
+  margin-bottom: 33px;
+  transition: .5s;
+  border-radius: 50%;
+
+  @include max(540) {
+    flex: none;
+    width: 70px;
+    height: 70px;
+    margin-right: 16px;
+    margin-bottom: 0;
+  }
+
+  svg {
+    stroke: #fff;
+  }
+}
+
+.index-advantages__circle--01 {
+  background-color: #ffd100;
+
+  svg {
+    width: 71px;
+    height: 63px;
+
+    @include max(540) {
+      width: 31px;
+      height: 28px;
+    }
+  }
+}
+
+.index-advantages__circle--02 {
+  background-color: #6fcfeb;
+
+  svg {
+    width: 37px;
+    height: 71px;
+
+    @include max(540) {
+      width: 16px;
+      height: 31px;
+    }
+  }
+}
+
+.index-advantages__circle--03 {
+  background-color: #0b629b;
+
+  svg {
+    width: 71px;
+    height: 52px;
+
+    @include max(540) {
+      width: 31px;
+      height: 23px;
+    }
+  }
+}
+
+.index-advantages__text {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.21;
+  transition: .5s;
+  text-align: center;
+  color: #1d1d1b;
+
+  @include max(540) {
+    text-align: left;
+  }
+}
