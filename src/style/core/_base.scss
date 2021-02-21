@@ -145,22 +145,22 @@ svg {
   }
 }
 
-.main-double {
-  padding-top: 32px;
-
-  .container {
-    display: flex;
-
-    @include max(900) {
-      flex-direction: column-reverse;
-      align-items: center;
-    }
-  }
-}
-
-.main-double__body {
-  width: 100%;
-}
+//.main-double {
+//  padding-top: 32px;
+//
+//  .container {
+//    display: flex;
+//
+//    @include max(900) {
+//      flex-direction: column-reverse;
+//      align-items: center;
+//    }
+//  }
+//}
+//
+//.main-double__body {
+//  width: 100%;
+//}
 
 .container {
   position: relative;
@@ -174,17 +174,31 @@ svg {
   }
 }
 
-.title-section{
+.page-top {
+  min-height: 320px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.page-header {
+  .container {
+    padding-top: 32px;
+  }
+}
+
+.title-section {
   margin-bottom: 24px;
+
   @include max(768) {
     text-align: center;
   }
 }
 
-.title-48{
-//.title-40,
-//.title-32,
-//.title-24 {
+.title-48,
+.title-40,
+.title-32,
+.title-24 {
   font-weight: 300;
   color: $brand;
 
@@ -193,34 +207,35 @@ svg {
   }
 }
 
-.title-48{
+.title-48 {
   line-height: 1.21;
+
   @include responsive-font(48, 32);
 }
 
-//.title-40 {
-//  line-height: 1.25;
-//  margin-bottom: 20px;
-//
-//  @include responsive-font(40, 32);
-//  @include max(680) {
-//    margin-bottom: 16px;
-//  }
-//}
-//
-//.title-32 {
-//  line-height: 1.33;
-//  margin-bottom: 16px;
-//
-//  @include responsive-font(32, 24);
-//  @include max(680) {
-//    margin-bottom: 16px;
-//  }
-//}
-//
-//.title-24 {
-//  @include responsive-font(24, 16);
-//}
+.title-40 {
+  line-height: 1.25;
+  margin-bottom: 20px;
+
+  @include responsive-font(40, 32);
+  @include max(680) {
+    margin-bottom: 16px;
+  }
+}
+
+.title-32 {
+  line-height: 1.33;
+  margin-bottom: 16px;
+
+  @include responsive-font(32, 24);
+  @include max(680) {
+    margin-bottom: 16px;
+  }
+}
+
+.title-24 {
+  @include responsive-font(24, 16);
+}
 
 //.ul-list {
 //  margin: 0;
@@ -325,32 +340,29 @@ svg {
 
 .btn {
   font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.2;
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  height: 48px;
   margin-bottom: 16px;
   padding: 0 24px;
   cursor: pointer;
   user-select: none;
   transition: background-color .5s;
+  text-align: center;
   white-space: nowrap;
   text-decoration: none;
+  color: $brand;
   border: none;
   border-radius: 5px !important;
+  background-color: #edc205;
   box-shadow: none;
-
-  font-size: 20px;
-  font-weight: 300;
-  line-height: 1.2;
-  text-align: center;
-
-  height: 48px;
-  background-color: #EDC205;
-  color: $brand;
 
   &:hover {
     color: $brand;
     background-color: #ffd100;
-
   }
 }

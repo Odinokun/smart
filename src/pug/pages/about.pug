@@ -1,0 +1,149 @@
+extends ../_template
+
+mixin about-routs__item(numb, itemTitle, text)
+  li.about-routs__item
+    .about-routs__numb #{numb}
+    .about-routs__descr
+      .about-routs__title #{itemTitle}
+      .about-routs__text #{text}
+
+block variables
+  - var title = 'SMART Life'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header
+    include ../sections/subheader
+
+    //begin content
+    main.main
+      //begin page-top
+      .page-top(style="background-image: url('assets/img/bg-about.jpg')")
+      //end page-top
+
+      .page-header
+        .container
+          h2.title-48.page-header__title Про нас
+
+      //begin about__top
+      .about__top.about-top
+        .container
+          h2.about-top__title SMART Life -
+          p.about-top__text частина інноваційного медичного хабу <span>LIFE CLINICS</span>, що представлений трьома клініками у Львові:
+
+          //begin about-top__clinics
+          .about-top__clinic-list
+            //begin about-top__clinic-item
+            .about-top__clinic-item
+              a(href="#").about-top__clinic-logo
+                img(src="assets/img/logo-smart.png" alt="smart")
+              a(href="#").about-top__clinic-title.title-32 SMART Life
+              a(href="#").about-top__clinic-subtitle.title-24 поліклініка
+              .about-top__clinic-descr
+                p Надає послуги висококласної первинної та вторинної медичної допомоги на базі принципів доказової медицини
+            //end about-top__clinic-item
+            //begin about-top__clinic-item
+            .about-top__clinic-item
+              a(href="#").about-top__clinic-logo
+                img(src="assets/img/logo-ovo.png" alt="ovo")
+              a(href="#").about-top__clinic-title.title-32 OVO Life
+              a(href="#").about-top__clinic-subtitle.title-24 клініка репродуктивних технологій
+              .about-top__clinic-descr
+                p Спеціалізується на профілактиці, діагностиці та лікуванні порушень репродуктивної функції жінок та чоловіків. Має власну унікальну ембріологічну лабораторію
+            //end about-top__clinic-item
+            //begin about-top__clinic-item
+            .about-top__clinic-item
+              a(href="#").about-top__clinic-logo
+                img(src="assets/img/logo-gastro.png" alt="gastro")
+              a(href="#").about-top__clinic-title.title-32 GASTRO Life
+              a(href="#").about-top__clinic-subtitle.title-24 гастроентерологічний центр
+              .about-top__clinic-descr
+                p Реалізує сучасні програми діагностики та лікування у напрямках гастроентерології, гепатології, дієтології
+            //end about-top__clinic-item
+          //end about-top__clinics
+      //end about__top
+
+      //begin about__routes
+      .about__routes.about-routs
+        .container
+          h2.about-routs__main-title.title-40 5 напрямків діяльності <span>SMART Life</span>
+
+          ul.about-routs__list
+            +about-routs__item('1', 'Жіноче здоров’я', 'Профілактичні огляди гінеколога, усі види діагностики та лікування гінекологічних патологій, естетична гінекологія')
+            +about-routs__item('2', 'Чоловіче здоров’я', 'Профілактичні огляди уролога, діагностика та лікування еректильної дисфункції, простатиту та інших урологічних патологій')
+            +about-routs__item('3', 'Планування вагітності', 'Комплексне обстеження пари в період підготовки до вагітності')
+            +about-routs__item('4', 'Лікування безпліддя', 'Повний спектр програм лікування безпліддя, у тому числі запліднення in vitro, стимуляція овуляції, донація яйцеклітин, сурогатне материнство тощо')
+            +about-routs__item('5', 'Ведення вагітності', 'Експертний супровід вагітності, усі види аналізів та досліджень для контролю стану здоров’я вагітної та її майбутньої дитини')
+      //end about__routes
+
+      //begin about__priority
+      .about__priority.about-priority
+        .container
+          h2.about-priority__main-title.title-40 Пріоритетні принципи <span>SMART Life</span>
+
+          ul.about-priority__list
+            li.about-priority__item
+              .about-priority__pic
+                img(src="assets/img/about-01.jpg" alt="picture")
+              .about-priority__descr
+                .about-priority__title Персональний супровід
+                ul.about-priority__list-sm
+                  li.about-priority__item-sm Реалізуємо індивідуальні програми обстеження та лікування
+                  li.about-priority__item-sm З повагою, турботою та великою емпатією ставимося до кожного пацієнта
+                  li.about-priority__item-sm Пропонуємо максимально комфортні умови обстеження та лікування
+                  li.about-priority__item-sm Гарантуємо повну конфіденційність нашого спілкування
+            li.about-priority__item
+              .about-priority__pic
+                img(src="assets/img/about-02.jpg" alt="picture")
+              .about-priority__descr
+                .about-priority__title Сучасні технології
+                ul.about-priority__list-sm
+                  li.about-priority__item-sm Працюємо за міжнародними клінічними протоколами
+                  li.about-priority__item-sm Реалізуємо програми точної діагностики із застосуванням надсучасного обладнання
+                  li.about-priority__item-sm Базуємо діяльність на новітніх досягненнях світової практики
+                  li.about-priority__item-sm Керуємося стандартами ВООЗ
+            li.about-priority__item
+              .about-priority__pic
+                img(src="assets/img/about-03.jpg" alt="picture")
+              .about-priority__descr
+                .about-priority__title Кращі фахівці
+                ul.about-priority__list-sm
+                  li.about-priority__item-sm Пропонуємо послуги кращих експертів з репродуктології в Україні
+                  li.about-priority__item-sm Пишаємося високим професіоналізмом наших лікарів
+      //end about__priority
+
+      //begin about__contacts
+      .about__contacts.about-contacts
+        .container
+          .first-visit__text-block
+            h3.title-32 Ми поруч з вами <span>24/7!</span>
+            a(href="https://goo.gl/maps/BTUT2QsmjXZBCCbF6" target="_blank" rel="nofollow noopener noreferrer").first-visit__link
+              +svg('marker')
+              span м. Львів , пр. Червоної Калини, 60, Avalon Up
+            a(href="tel:+380971621688").first-visit__link
+              +svg('smart')
+              span 097 16 216 88
+      //end about__contacts
+      include ../sections/map-sm
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts
+    script.
+      function initMap() {
+        let windowWidth = document.documentElement.clientWidth;
+        let myLatLng = {lat: 49.7946105662072, lng: 24.05389071216973};
+
+        let map = new google.maps.Map(document.getElementById('map-sm'), {
+          zoom: 17,
+          center: myLatLng,
+          styles: []
+        });
+        let marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Ovo',
+          icon: 'assets/img/marker.svg'
+        });
+      }
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdGbaaf94NCuCkoH98Ry12HA59U0eTqIA&callback=initMap")
