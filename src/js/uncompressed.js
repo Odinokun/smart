@@ -4,6 +4,7 @@
 $(document).ready(function ($) {
   pageWidget([
     'index',
+    'app',
     'contacts',
     'about'
     ]);
