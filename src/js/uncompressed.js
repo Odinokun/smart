@@ -6,6 +6,7 @@ $(document).ready(function ($) {
     'index',
     'app',
     'contacts',
+    'search',
     'about'
     ]);
 });

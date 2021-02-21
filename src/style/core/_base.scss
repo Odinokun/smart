@@ -94,22 +94,22 @@ input {
   display: block;
   height: 48px;
   margin-bottom: 16px;
+  background-color: #fff;
   padding: 7px 24px 5px 24px;
   transition: .5s;
   color: $text;
-  border: solid 1px #d1d1d1;
-  border-radius: 25px !important;
+  border: solid 1px #D1D1D1;
+  border-radius: 5px !important;
   outline: none !important;
-  background-color: transparent;
 
-  @include placeholder-color(#d1d1d1);
+  @include placeholder-color(#8D8D8C);
 
   &:hover {
-    border: 1px solid #adc9b8;
+    border: 1px solid #A4A4A3;
   }
 
   &:focus {
-    border: 1px solid #004c45;
+    border: 1px solid #777776;
   }
 }
 
