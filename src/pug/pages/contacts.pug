@@ -1,0 +1,112 @@
+extends ../_template
+
+mixin about-routs__item(numb, itemTitle, text)
+  li.about-routs__item
+    .about-routs__numb #{numb}
+    .about-routs__descr
+      .about-routs__title #{itemTitle}
+      .about-routs__text #{text}
+
+block variables
+  - var title = 'SMART Life'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header
+    include ../sections/subheader
+
+    //begin content
+    main.main
+      //begin page-top
+      .page-top(style="background-image: url('assets/img/bg-contacts.jpg')")
+      //end page-top
+
+      .page-header
+        .container
+          h2.title-48.page-header__title Контакти
+
+      //begin contacts__body
+      .contacts__body.contacts-body
+        .container
+          //begin contacts-body__left
+          .contacts-body__left
+            a(href="/").contacts-body__logo
+              img(src="assets/img/logo-map.svg" alt="SMART Life")
+          //end contacts-body__left
+
+          //begin contacts-body__right
+          .contacts-body__right
+            //begin contacts-body__link
+            .contacts-body__link
+              .contacts-body__link-icon.contacts-body__link-icon--map
+                +svg('marker')
+              .contacts-body__link-text
+                .contacts-body__link-text-sm Адреса
+                a(href="https://goo.gl/maps/BTUT2QsmjXZBCCbF6" target="_blank" rel="nofollow noopener noreferrer").contacts-body__link-text-lg м. Львів , пр. Червоної Калини, 60, Avalon Up
+            //end contacts-body__link
+
+            //begin contacts-body__link
+            .contacts-body__link
+              .contacts-body__link-icon.contacts-body__link-icon--phone
+                +svg('smart')
+              .contacts-body__link-text
+                .contacts-body__link-text-sm Телефон
+                a(href="tel:+380971621688").contacts-body__link-text-lg 097 16 216 88
+            //end contacts-body__link
+
+            //begin contacts-body__link
+            .contacts-body__link
+              .contacts-body__link-icon
+                +svg('clock')
+              .contacts-body__link-text
+                .contacts-body__link-text-sm Графік роботи
+                .contacts-body__link-text-lg Понеділок - Субота: 8:00 - 20:00
+                .contacts-body__link-text-lg Неділя: Вихідний
+            //end contacts-body__link
+
+            //begin contacts-body__link
+            .contacts-body__link
+              .contacts-body__link-icon
+                +svg('mail')
+              .contacts-body__link-text
+                .contacts-body__link-text-sm Електронна пошта
+                a(href="mailto:info@smartlifeclinic.com").contacts-body__link-text-lg info@smartlifeclinic.com
+            //end contacts-body__link
+
+            //begin contacts-body__socials
+            .contacts-body__socials
+              a(href="#" target="_blank" rel="nofollow noopener noreferrer").contacts-body__social-link
+                .contacts-body__socials-icon
+                  +svg('fb')
+                span.contacts-body__socials-text Ми у Facebook
+              a(href="#" target="_blank" rel="nofollow noopener noreferrer").contacts-body__social-link
+                .contacts-body__socials-icon
+                  +svg('inst')
+                span.contacts-body__socials-text Ми в Instagram
+            //end contacts-body__socials
+          //end contacts-body__right
+      //end contacts__body
+
+      include ../sections/map-sm
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts
+    script.
+      function initMap() {
+        let windowWidth = document.documentElement.clientWidth;
+        let myLatLng = {lat: 49.7946105662072, lng: 24.05389071216973};
+
+        let map = new google.maps.Map(document.getElementById('map-sm'), {
+          zoom: 17,
+          center: myLatLng,
+          styles: []
+        });
+        let marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'SMART Life',
+          icon: 'assets/img/marker.svg'
+        });
+      }
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdGbaaf94NCuCkoH98Ry12HA59U0eTqIA&callback=initMap")

@@ -62,11 +62,13 @@ p {
 }
 
 a {
+  transition: .5s;
   text-decoration: underline;
   color: $brand;
 
   &:hover {
     text-decoration: none;
+    color: $hover;
   }
 }
 

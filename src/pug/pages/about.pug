@@ -115,12 +115,12 @@ block content
       //begin about__contacts
       .about__contacts.about-contacts
         .container
-          .first-visit__text-block
+          .about-contacts__text-block
             h3.title-32 Ми поруч з вами <span>24/7!</span>
-            a(href="https://goo.gl/maps/BTUT2QsmjXZBCCbF6" target="_blank" rel="nofollow noopener noreferrer").first-visit__link
+            a(href="https://goo.gl/maps/BTUT2QsmjXZBCCbF6" target="_blank" rel="nofollow noopener noreferrer").about-contacts__link
               +svg('marker')
               span м. Львів , пр. Червоної Калини, 60, Avalon Up
-            a(href="tel:+380971621688").first-visit__link
+            a(href="tel:+380971621688").about-contacts__link
               +svg('smart')
               span 097 16 216 88
       //end about__contacts
@@ -142,7 +142,7 @@ block content
         let marker = new google.maps.Marker({
           position: myLatLng,
           map: map,
-          title: 'Ovo',
+          title: 'SMART Life',
           icon: 'assets/img/marker.svg'
         });
       }
