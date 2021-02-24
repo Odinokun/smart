@@ -1,0 +1,34 @@
+extends ../_template
+
+block variables
+  - var title = 'SMART Life'
+
+block content
+  .main-wrap.no-js
+    //begin content
+    main.main.register
+      //begin register__top
+      .register__top.register-top
+        .container
+          a(href="/").register-top__logo
+            img(src="assets/img/logo-map.svg" alt="SMART Life")
+      //end register__top
+
+
+      //begin register__main
+      .register__main.register-main
+        .container
+          .register__header
+            .container
+              h2.register__title Моя медична карта
+
+          //begin register__form
+          form.register__form.register-form
+            input.register-form__input(type='text' placeholder='Логін')
+            input.register-form__input(type='password' placeholder='Пароль')
+            button.register-form__submit.btn Увійти
+          //end register__form
+      //end register__main
+    //end content
+
+    include ../sections/scripts

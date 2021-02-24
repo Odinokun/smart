@@ -7,7 +7,9 @@ $(document).ready(function ($) {
     'app',
     'contacts',
     'search',
-    'about'
+    'about',
+    'register',
+    'services',
     ]);
 });
 

@@ -35,21 +35,3 @@ block content
 
     include ../sections/footer
     include ../sections/scripts
-    script.
-      function initMap() {
-        let windowWidth = document.documentElement.clientWidth;
-        let myLatLng = {lat: 49.7946105662072, lng: 24.05389071216973};
-
-        let map = new google.maps.Map(document.getElementById('map-sm'), {
-          zoom: 17,
-          center: myLatLng,
-          styles: []
-        });
-        let marker = new google.maps.Marker({
-          position: myLatLng,
-          map: map,
-          title: 'SMART Life',
-          icon: 'assets/img/marker.svg'
-        });
-      }
-    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdGbaaf94NCuCkoH98Ry12HA59U0eTqIA&callback=initMap")

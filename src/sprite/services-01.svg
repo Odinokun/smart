@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36.475" height="65.996" viewBox="0 0 36.475 65.996">
+  <g id="Group_1391" data-name="Group 1391" transform="translate(-3797.953 -2502.379)">
+    <g id="Group_1388" data-name="Group 1388" transform="translate(3798.953 2503.379)">
+      <path id="Path_957" data-name="Path 957" d="M3813.1,2541.28c6.522-4.761,14.667-8.433,20.324-10.669v-12.354c0-8.218-7.718-14.878-17.24-14.878s-17.235,6.66-17.235,14.878v25.823a26.121,26.121,0,0,0,2.444,9.861A44.972,44.972,0,0,1,3813.1,2541.28Z" transform="translate(-3798.953 -2503.379)" fill="rgba(0,0,0,0)" stroke="#1d1d1b" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Path_958" data-name="Path 958" d="M3813.353,2544.048a44.963,44.963,0,0,0-11.707,12.66c3.01,6.842,8.5,13.434,14.792,13.434,9.521,0,17.239-15.078,17.239-23.3v-13.469C3828.019,2535.614,3819.875,2539.286,3813.353,2544.048Z" transform="translate(-3799.201 -2506.146)" fill="rgba(0,0,0,0)" stroke="#1d1d1b" stroke-miterlimit="10" stroke-width="2"/>
+    </g>
+    <g id="Group_1389" data-name="Group 1389" transform="translate(3810.293 2517.664)">
+      <path id="Path_959" data-name="Path 959" d="M3824.382,2519.4a.281.281,0,0,1-.562,0,.281.281,0,1,1,.563,0Z" transform="translate(-3812.587 -2519.116)" fill="rgba(0,0,0,0)" stroke="#1d1d1b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_960" data-name="Path 960" d="M3812.009,2519.4a.281.281,0,1,1-.283-.283A.281.281,0,0,1,3812.009,2519.4Z" transform="translate(-3811.446 -2519.116)" fill="rgba(0,0,0,0)" stroke="#1d1d1b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+    <g id="Group_1390" data-name="Group 1390" transform="translate(3812.159 2521.899)">
+      <path id="Path_961" data-name="Path 961" d="M3817.24,2528.863a.441.441,0,0,1-.877,0,.953.953,0,1,0,.877,0Z" transform="translate(-3812.771 -2525.2)" fill="rgba(0,0,0,0)" stroke="#1d1d1b" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Path_962" data-name="Path 962" d="M3817.411,2527.774a.444.444,0,0,0-.443.445.326.326,0,0,0,0,.051.441.441,0,0,0,.877,0,.361.361,0,0,0,.005-.051A.443.443,0,0,0,3817.411,2527.774Z" transform="translate(-3813.381 -2524.608)" fill="rgba(0,0,0,0)" stroke="#1d1d1b" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Path_963" data-name="Path 963" d="M3821.564,2529.575a4.031,4.031,0,1,1-4.032-4.031A4.033,4.033,0,0,1,3821.564,2529.575Z" transform="translate(-3813.501 -2525.544)" fill="rgba(0,0,0,0)" stroke="#1d1d1b" stroke-miterlimit="10" stroke-width="2"/>
+    </g>
+    <path id="Path_964" data-name="Path 964" d="M3824.686,2510.487v2.066c0,1.006-1.246,1.419-2.769.915-.812-.267-1.9-.625-2.966-.977a2.752,2.752,0,0,1-1.734.555h-1.3a2.756,2.756,0,0,1-1.739-.555l-2.966.977c-1.523.5-2.771.091-2.771-.915v-2.062a13.551,13.551,0,1,0,16.247,0Z" transform="translate(-0.375 -0.656)" fill="rgba(0,0,0,0)" stroke="#1d1d1b" stroke-miterlimit="10" stroke-width="2"/>
+    <path id="Path_965" data-name="Path 965" d="M3814.23,2509.616a1.211,1.211,0,0,1,.5-.931c-.584-.194-1.16-.383-1.7-.563-.455-.149-.893-.293-1.261-.417-1.523-.5-2.771-.09-2.771.915v3.656c0,1.006,1.248,1.419,2.771.915.813-.267,1.9-.624,2.966-.978a1.213,1.213,0,0,1-.5-.931Z" transform="translate(-0.926 -0.379)" fill="rgba(0,0,0,0)" stroke="#1d1d1b" stroke-miterlimit="10" stroke-width="2"/>
+    <path id="Path_966" data-name="Path 966" d="M3823.537,2507.7l-1.259.415c-.545.179-1.121.371-1.707.565a1.219,1.219,0,0,1,.5.931v1.667a1.221,1.221,0,0,1-.5.931c1.068.354,2.154.711,2.966.978,1.523.5,2.769.091,2.769-.915v-3.656C3826.305,2507.615,3825.06,2507.2,3823.537,2507.7Z" transform="translate(-1.994 -0.379)" fill="rgba(0,0,0,0)" stroke="#1d1d1b" stroke-miterlimit="10" stroke-width="2"/>
+    <path id="Path_967" data-name="Path 967" d="M3820.536,2509.681a1.221,1.221,0,0,0-.5-.931,2.76,2.76,0,0,0-1.734-.558H3817a2.766,2.766,0,0,0-1.739.558,1.215,1.215,0,0,0-.5.931v1.666a1.214,1.214,0,0,0,.5.931,2.758,2.758,0,0,0,1.739.555h1.3a2.752,2.752,0,0,0,1.734-.555,1.22,1.22,0,0,0,.5-.931Z" transform="translate(-1.459 -0.444)" fill="rgba(0,0,0,0)" stroke="#1d1d1b" stroke-miterlimit="10" stroke-width="2"/>
+  </g>
+</svg>
