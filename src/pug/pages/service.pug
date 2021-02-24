@@ -1,0 +1,62 @@
+extends ../_template
+
+mixin service__item(text, newprice)
+  li.service__item
+    a(href="#").service__link
+      .service__text #{text}
+      .service__price
+        .service__price-new #{newprice}
+
+block variables
+  - var title = 'SMART Life'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header
+    include ../sections/subheader
+
+    //begin content
+    main.main
+      //begin page-top
+      .page-top(style="background-image: url('assets/img/bg-child.jpg')")
+      //end page-top
+
+      .page-header
+        .container
+          h2.title-48.page-header__title Дітям
+
+      //begin service
+      .service
+        .container
+          ul.service__list
+            +service__item('Консультація сімейного лікаря', '490 грн')
+            +service__item('Консультація ЛОРа', '490 грн')
+            +service__item('Консультація педіатра', '490 грн')
+            +service__item('УЗД внутрішніх органів', '590 грн')
+            +service__item('Медична книжка для жінки', '1290 грн')
+            +service__item('Консультація педіатра', '490 грн')
+            +service__item('УЗД внутрішніх органів', '590 грн')
+            +service__item('Медична книжка для жінки', '1290 грн')
+      //end service
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts
+    script.
+      function initMap() {
+        let windowWidth = document.documentElement.clientWidth;
+        let myLatLng = {lat: 49.7946105662072, lng: 24.05389071216973};
+
+        let map = new google.maps.Map(document.getElementById('map-sm'), {
+          zoom: 17,
+          center: myLatLng,
+          styles: []
+        });
+        let marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'SMART Life',
+          icon: 'assets/img/marker.svg'
+        });
+      }
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdGbaaf94NCuCkoH98Ry12HA59U0eTqIA&callback=initMap")

@@ -1,22 +1,9 @@
-.index-actual {
-  .container {
-    padding-top: 96px;
-    padding-bottom: 80px;
-
-    @include max(768) {
-      padding-top: 24px;
-      padding-bottom: 8px;
-    }
-  }
-}
-
-.index-actual__list {
+.service__list {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
   width: calc(100% + 16px);
   margin: 0 0 0 -8px;
-  padding: 0;
+  padding: 16px 0;
 
   @include max(520) {
     width: 100%;
@@ -24,7 +11,7 @@
   }
 }
 
-.index-actual__item {
+.service__item {
   display: flex;
   width: calc(20% - 16px);
   margin: 0 8px 16px 8px;
@@ -40,7 +27,7 @@
   }
 }
 
-.index-actual__link {
+.service__link {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -57,7 +44,7 @@
   }
 }
 
-.index-actual__text {
+.service__text {
   font-size: 24px;
   font-weight: 300;
   line-height: 1.21;
@@ -69,13 +56,13 @@
   }
 }
 
-.index-actual__price {
+.service__price {
   display: flex;
   align-items: center;
   margin-top: auto;
 }
 
-.index-actual__price-new {
+.service__price-new {
   font-size: 24px;
   font-weight: 600;
   line-height: 1.21;
@@ -84,7 +71,7 @@
   color: #0b629b;
 }
 
-.index-actual__price-old {
+.service__price-old {
   font-size: 20px;
   font-weight: 300;
   line-height: 1;

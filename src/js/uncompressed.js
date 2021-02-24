@@ -10,6 +10,7 @@ $(document).ready(function ($) {
     'about',
     'register',
     'services',
+    'service',
     ]);
 });
 
