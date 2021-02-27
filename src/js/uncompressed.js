@@ -11,6 +11,7 @@ $(document).ready(function ($) {
     'register',
     'services',
     'service',
+    'price',
     ]);
 });
 

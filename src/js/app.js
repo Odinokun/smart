@@ -17,6 +17,8 @@ $(function() {
   require('./modules/burgerMenu')();
   require('./modules/burgerSubmenu')();
 
+  // begin accordion
+  require('./modules/accordion')();
 
   // begin Slick slider
   require('./modules/slick')();

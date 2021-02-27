@@ -94,18 +94,18 @@ input {
   display: block;
   height: 48px;
   margin-bottom: 16px;
-  background-color: #fff;
   padding: 7px 24px 5px 24px;
   transition: .5s;
   color: $text;
-  border: solid 1px #D1D1D1;
+  border: solid 1px #d1d1d1;
   border-radius: 5px !important;
   outline: none !important;
+  background-color: #fff;
 
-  @include placeholder-color(#8D8D8C);
+  @include placeholder-color(#8d8d8c);
 
   &:hover {
-    border: 1px solid #A4A4A3;
+    border: 1px solid #a4a4a3;
   }
 
   &:focus {
@@ -233,13 +233,50 @@ svg {
   background-size: cover;
 }
 
+.page-back {
+  padding-top: 26px;
+  padding-bottom: 5px;
+}
+
+.page-back__link {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+  text-align: left;
+  text-decoration: none;
+  color: #000;
+
+  strong {
+    font-weight: 600;
+    padding-left: 4px;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 19px;
+    height: 19px;
+    margin: auto;
+    content: '';
+    transform: rotate(45deg);
+    border-bottom: 4px solid $brand;
+    border-left: 4px solid $brand;
+  }
+}
+
 .page-header {
   .container {
     padding-top: 32px;
   }
 }
 
-.page-header__title{
+.page-header__title {
   @include responsive-font(48, 24);
 }
 

@@ -1,0 +1,204 @@
+extends ../_template
+
+block variables
+  - var title = 'SMART Life'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header
+    include ../sections/subheader
+
+    //begin content
+    main.main
+      .page-back
+        .container
+          a(href="#").page-back__link Назад до <strong>Цін</strong>
+
+      .page-header
+        .container
+          h2.title-48.page-header__title Дітям
+
+      //begin price
+      .price
+        .container
+          //begin price__accordion
+          .price__accordion
+            //begin price__row
+            .price__row
+              //begin price-question
+              .price__question.price-question
+                .price-question__title Консультації спеціалістів
+                .price-question__cash грн
+                .price-question__btn
+                  +svg('arr-down')
+              //end price-question
+
+              //begin price-answer
+              .price__answer.price-answer
+                //begin price-answer__section
+                .price-answer__section
+                  .price-answer__row
+                    .price-answer__text Консультація сімейного лікаря
+                    .price-answer__cash 125
+                  .price-answer__row
+                    .price-answer__text Прецизійне обстеження жовчного міхура з пробним жовчогінним сніданком
+                    .price-answer__cash 31880
+                  .price-answer__row
+                    .price-answer__text Повторна консультація сімейного лікаря
+                    .price-answer__cash 225
+                  .price-answer__row
+                    .price-answer__text Онлайн консультація сімейного лікаря
+                    .price-answer__cash 11500
+                  .price-answer__row
+                    .price-answer__text Консультація сімейного лікаря
+                    .price-answer__cash 125
+                  .price-answer__row
+                    .price-answer__text Прецизійне обстеження жовчного міхура з пробним жовчогінним сніданком
+                    .price-answer__cash 31880
+                //end price-answer__section
+              //end price-answer
+            //end price__row
+
+            //begin price__row
+            .price__row
+              //begin price-question
+              .price__question.price-question
+                .price-question__title Діагностика
+                .price-question__cash грн
+                .price-question__btn
+                  +svg('arr-down')
+              //end price-question
+
+              //begin price-answer
+              .price__answer.price-answer
+                //begin price-answer__section
+                .price-answer__title Check up
+                .price-answer__section
+                  .price-answer__row
+                    .price-answer__text Консультація сімейного лікаря
+                    .price-answer__cash 125
+                  .price-answer__row
+                    .price-answer__text Прецизійне обстеження жовчного міхура з пробним жовчогінним сніданком
+                    .price-answer__cash 31880
+                  .price-answer__row
+                    .price-answer__text Повторна консультація сімейного лікаря
+                    .price-answer__cash 225
+                  .price-answer__row
+                    .price-answer__text Онлайн консультація сімейного лікаря
+                    .price-answer__cash 11500
+                  .price-answer__row
+                    .price-answer__text Консультація сімейного лікаря
+                    .price-answer__cash 125
+                .price-answer__title Пів річні
+                .price-answer__section
+                  .price-answer__row
+                    .price-answer__text Консультація сімейного лікаря
+                    .price-answer__cash 125
+                  .price-answer__row
+                    .price-answer__text Прецизійне обстеження жовчного міхура з пробним жовчогінним сніданком
+                    .price-answer__cash 31880
+                  .price-answer__row
+                    .price-answer__text Повторна консультація сімейного лікаря
+                    .price-answer__cash 225
+                  .price-answer__row
+                    .price-answer__text Онлайн консультація сімейного лікаря
+                    .price-answer__cash 11500
+                  .price-answer__row
+                    .price-answer__text Консультація сімейного лікаря
+                    .price-answer__cash 125
+                //end price-answer__section
+              //end price-answer
+            //end price__row
+
+            //begin price__row
+            .price__row
+              //begin price-question
+              .price__question.price-question
+                .price-question__title Профілактика / Вакцинація
+                .price-question__cash грн
+                .price-question__btn
+                  +svg('arr-down')
+              //end price-question
+
+              //begin price-answer
+              .price__answer.price-answer
+                //begin price-answer__section
+                .price-answer__section
+                  .price-answer__row
+                    .price-answer__text Консультація сімейного лікаря
+                    .price-answer__cash 125
+                  .price-answer__row
+                    .price-answer__text Прецизійне обстеження жовчного міхура з пробним жовчогінним сніданком
+                    .price-answer__cash 31880
+                  .price-answer__row
+                    .price-answer__text Повторна консультація сімейного лікаря
+                    .price-answer__cash 225
+                  .price-answer__row
+                    .price-answer__text Онлайн консультація сімейного лікаря
+                    .price-answer__cash 11500
+                  .price-answer__row
+                    .price-answer__text Консультація сімейного лікаря
+                    .price-answer__cash 125
+                  .price-answer__row
+                    .price-answer__text Прецизійне обстеження жовчного міхура з пробним жовчогінним сніданком
+                    .price-answer__cash 31880
+                //end price-answer__section
+              //end price-answer
+            //end price__row
+
+            //begin price__row
+            .price__row
+              //begin price-question
+              .price__question.price-question
+                .price-question__title Лікування / Дерматологія
+                .price-question__cash грн
+                .price-question__btn
+                  +svg('arr-down')
+              //end price-question
+
+              //begin price-answer
+              .price__answer.price-answer
+                //begin price-answer__section
+                .price-answer__title Check up
+                .price-answer__section
+                  .price-answer__row
+                    .price-answer__text Консультація сімейного лікаря
+                    .price-answer__cash 125
+                  .price-answer__row
+                    .price-answer__text Прецизійне обстеження жовчного міхура з пробним жовчогінним сніданком
+                    .price-answer__cash 31880
+                  .price-answer__row
+                    .price-answer__text Повторна консультація сімейного лікаря
+                    .price-answer__cash 225
+                  .price-answer__row
+                    .price-answer__text Онлайн консультація сімейного лікаря
+                    .price-answer__cash 11500
+                  .price-answer__row
+                    .price-answer__text Консультація сімейного лікаря
+                    .price-answer__cash 125
+                .price-answer__title Пів річні
+                .price-answer__section
+                  .price-answer__row
+                    .price-answer__text Консультація сімейного лікаря
+                    .price-answer__cash 125
+                  .price-answer__row
+                    .price-answer__text Прецизійне обстеження жовчного міхура з пробним жовчогінним сніданком
+                    .price-answer__cash 31880
+                  .price-answer__row
+                    .price-answer__text Повторна консультація сімейного лікаря
+                    .price-answer__cash 225
+                  .price-answer__row
+                    .price-answer__text Онлайн консультація сімейного лікаря
+                    .price-answer__cash 11500
+                  .price-answer__row
+                    .price-answer__text Консультація сімейного лікаря
+                    .price-answer__cash 125
+                //end price-answer__section
+              //end price-answer
+            //end price__row
+          //end price__accordion
+      //end price
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts
