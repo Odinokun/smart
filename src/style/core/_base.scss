@@ -250,6 +250,13 @@ svg {
   text-decoration: none;
   color: #000;
 
+  &:hover {
+    &::before {
+      border-bottom: 4px solid #0e6499;
+      border-left: 4px solid #0e6499;
+    }
+  }
+
   strong {
     font-weight: 600;
     padding-left: 4px;
@@ -264,6 +271,7 @@ svg {
     height: 19px;
     margin: auto;
     content: '';
+    transition: .5s;
     transform: rotate(45deg);
     border-bottom: 4px solid $brand;
     border-left: 4px solid $brand;

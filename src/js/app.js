@@ -20,6 +20,9 @@ $(function() {
   // begin accordion
   require('./modules/accordion')();
 
+  // begin team filter
+  require('./modules/teamFilter')();
+
   // begin Slick slider
   require('./modules/slick')();
 

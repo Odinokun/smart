@@ -1,0 +1,68 @@
+extends ../_template
+
+mixin team-list__item(ava)
+  //begin team-list__item
+  li.team-list__item
+    .team-list__link
+      a(href="#").team-list__ava
+        img(src="assets/img/team-" + ava + ".jpg" alt="doctor")
+      .team-list__descr
+        a(href="#").team-list__name.title-24 Семчишин Роксолана Олександрівна
+        a(href="#").team-list__position Репродуктолог, завідувач клініки OVO life, мама двох хлопців
+  //end team-list__item
+
+block variables
+  - var title = 'SMART Life'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header
+    include ../sections/subheader
+
+    //begin content
+    main.main
+      .page-header
+        .container
+          h2.title-48.page-header__title Лікарі
+      .team
+        .container
+          //begin team__menu
+          nav.team__menu.team-menu
+            .team-menu__close
+              +svg('close')
+            ul.team-menu__list
+              li.team-menu__item.active
+                a(href="#").team-menu__link Вся медична команда
+              li.team-menu__item
+                a(href="#").team-menu__link Репродуктолог
+              li.team-menu__item
+                a(href="#").team-menu__link Гінеколог
+              li.team-menu__item
+                a(href="#").team-menu__link Ембріолог
+              li.team-menu__item
+                a(href="#").team-menu__link Генетик
+              li.team-menu__item
+                a(href="#").team-menu__link Супровід пацієнта
+          //end team__menu
+
+          .team-menu__btn-wrap
+            a(href="#").team-menu__btn
+              span Вся медична команда
+
+        .container
+          //begin team__list
+          ul.team__list.team-list
+            +team-list__item('01')
+            +team-list__item('02')
+            +team-list__item('03')
+            +team-list__item('04')
+            +team-list__item('05')
+            +team-list__item('06')
+            +team-list__item('02')
+            +team-list__item('03')
+          //end team__list
+
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts

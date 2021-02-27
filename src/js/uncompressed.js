@@ -12,6 +12,7 @@ $(document).ready(function ($) {
     'services',
     'service',
     'price',
+    'team',
     ]);
 });
 
