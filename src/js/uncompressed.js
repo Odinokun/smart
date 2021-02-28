@@ -13,6 +13,8 @@ $(document).ready(function ($) {
     'service',
     'price',
     'team',
+    'doc',
+    'consult'
     ]);
 });
 

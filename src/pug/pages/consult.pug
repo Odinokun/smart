@@ -1,0 +1,50 @@
+extends ../_template
+
+block variables
+  - var title = 'SMART Life'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header
+    include ../sections/subheader
+
+    //begin content
+    main.main
+      .page-back
+        .container
+          a(href="#").page-back__link Назад до <strong>Чоловікам</strong>
+
+      //begin main-double
+      .main__double.main-double
+        .container
+          //begin main-double__body
+          .main-double__body.consult
+            .consult__item
+              h2.title-48 Консультація уролога
+              p Уролог спеціалізується на лікування органів репродуктивної та сечовидільної систем чоловіка.
+            .consult__item
+              h2.title-32 Як підготуватися?
+              ol.ol-list.consult__ol-list
+                li За 2 дні до прийому бажано не мати статевих стосунків
+                li Не мочитись 3-4 години до прийому у лікаря
+                li Підготувати результати попередніх аналізів
+            .consult__item
+              h2.title-32 Як проходить?
+              ul.ul-list
+                li Лікар збирає інформацію про скарги пацієнта
+                li Проводить візуальний зовнішній огляд та пальпацію статевих органів
+                li Робить забір мазка з уретри для виявлення інфекцій та запальних процесів
+            .consult__item
+              h2.title-32 Що входить?
+              ul.ul-list-2.ul-list-3
+                li Бесіда з лікарем
+                li Огляд та забір мазка
+                li Видача направлення на додаткові дослідження
+          //end main-double__body
+
+          include ../sections/aside
+      //end main-double
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts

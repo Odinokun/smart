@@ -147,22 +147,24 @@ svg {
   }
 }
 
-//.main-double {
-//  padding-top: 32px;
-//
-//  .container {
-//    display: flex;
-//
-//    @include max(900) {
-//      flex-direction: column-reverse;
-//      align-items: center;
-//    }
-//  }
-//}
-//
-//.main-double__body {
-//  width: 100%;
-//}
+.main-double {
+  padding-top: 32px;
+
+
+  .container {
+    display: flex;
+
+    @include max(900) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.main-double__body {
+  width: 100%;
+  padding-right: 24px;
+}
 
 .container {
   position: relative;
@@ -239,7 +241,6 @@ svg {
 }
 
 .page-back__link {
-  font-size: 24px;
   font-weight: 300;
   line-height: 1;
   position: relative;
@@ -250,10 +251,20 @@ svg {
   text-decoration: none;
   color: #000;
 
+  @include responsive-font(24, 16);
+  @include max(900) {
+    padding-left: 18px;
+  }
+
   &:hover {
     &::before {
       border-bottom: 4px solid #0e6499;
       border-left: 4px solid #0e6499;
+
+      @include max(900) {
+        border-bottom: 2px solid #0e6499;
+        border-left: 2px solid #0e6499;
+      }
     }
   }
 
@@ -275,6 +286,13 @@ svg {
     transform: rotate(45deg);
     border-bottom: 4px solid $brand;
     border-left: 4px solid $brand;
+
+    @include max(900) {
+      width: 10px;
+      height: 10px;
+      border-bottom: 2px solid $brand;
+      border-left: 2px solid $brand;
+    }
   }
 }
 
@@ -288,70 +306,85 @@ svg {
   @include responsive-font(48, 24);
 }
 
-//.ul-list {
-//  margin: 0;
-//  padding: 0;
-//
-//  li {
-//    position: relative;
-//    margin-bottom: 22px;
-//    padding-left: 64px;
-//    list-style: none;
-//
-//    @include max(680) {
-//      padding-left: 30px;
-//    }
-//
-//    &::before {
-//      position: absolute;
-//      top: 2px;
-//      left: 30px;
-//      width: 16px;
-//      height: 16px;
-//      content: '';
-//      border: 3px solid #adc9b8;
-//      border-radius: 50%;
-//
-//      @include max(680) {
-//        left: 0;
-//      }
-//    }
-//  }
-//}
-//
-//.ul-list-2 {
-//  margin: 0;
-//  padding: 0;
-//
-//  li {
-//    position: relative;
-//    margin-bottom: 22px;
-//    padding-left: 64px;
-//    list-style: none;
-//
-//    @include max(680) {
-//      padding-left: 30px;
-//    }
-//
-//    &::before {
-//      position: absolute;
-//      top: 2px;
-//      left: 30px;
-//      width: 22px;
-//      height: 16px;
-//      content: '';
-//      border-radius: 50%;
-//      background-image: url('../img/ul.svg');
-//      background-repeat: no-repeat;
-//      background-position: 50% 50%;
-//      background-size: contain;
-//
-//      @include max(680) {
-//        left: 0;
-//      }
-//    }
-//  }
-//}
+.ul-list {
+  margin: 0;
+  padding: 0;
+
+  li {
+    position: relative;
+    padding-left: 66px;
+    list-style: none;
+
+    @include max(680) {
+      padding-left: 30px;
+    }
+
+    &::before {
+      position: absolute;
+      top: 5px;
+      left: 34px;
+      width: 16px;
+      height: 16px;
+      content: '';
+      border: 3px solid #6fcfeb;
+      border-radius: 50%;
+
+      @include max(680) {
+        left: 0;
+      }
+    }
+  }
+}
+
+.ul-list--dark {
+  li {
+    &::before {
+      border: 3px solid $brand;
+    }
+  }
+}
+
+.ul-list-2 {
+  margin: 0;
+  padding: 0;
+
+  li {
+    position: relative;
+    margin-bottom: 16px;
+    padding-left: 64px;
+    list-style: none;
+
+    @include max(680) {
+      padding-left: 30px;
+    }
+
+    &::before {
+      position: absolute;
+      top: 2px;
+      left: 30px;
+      width: 22px;
+      height: 16px;
+      content: '';
+      border-radius: 50%;
+      background-image: url('../img/ul2.svg');
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: contain;
+
+      @include max(680) {
+        left: 0;
+      }
+    }
+  }
+}
+
+.ul-list-3 {
+  li {
+    &::before {
+      background-image: url('../img/ul.svg');
+    }
+  }
+}
 
 .ol-list {
   margin: 0;
@@ -363,7 +396,7 @@ svg {
   li {
     position: relative;
     margin-bottom: 22px;
-    padding-left: 64px;
+    padding-left: 60px;
     list-style: none;
 
     @include max(680) {

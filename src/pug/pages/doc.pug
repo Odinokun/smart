@@ -1,0 +1,93 @@
+extends ../_template
+
+block variables
+  - var title = 'SMART Life'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header
+    include ../sections/subheader
+
+    //begin content
+    main.main
+      .page-back
+        .container
+          a(href="#").page-back__link Назад до <strong>Лікарів</strong>
+
+      //begin doc
+      .doc
+        .container
+          //begin doc__top
+          .doc__top
+            .doc__ava
+              img(src="assets/img/doc.jpg" alt="picture")
+            .doc__info
+              .doc__name.title-40 Квіт Христина Богданівна
+              .doc__position.title-24 Кандидат медичних наук, доцент, головний лікар GastroLife, провідний гастроентеролог
+              .doc__spec.title-32 Медична спеціальність
+              ul.doc__spec-ul.ul-list
+                li Основна: <strong>гастроентерологія</strong>
+                li Суміжна: <strong>терапія</strong>
+          //end doc__top
+            
+          //begin doc__about
+          .doc__about.doc-about
+            .doc-about__block
+              .doc-about__title.title-32 Досвід роботи
+              .doc-about__row
+                .doc-about__item <strong>6+</strong>
+                .doc-about__item <strong>років досвіду роботи лікарем гастроентерологом</strong>
+              .doc-about__row
+                .doc-about__item <strong>11+</strong>
+                .doc-about__item <strong>років загальної лікарської практики</strong>
+              .doc-about__row
+                .doc-about__item 35+
+                .doc-about__item міжнародних конференцій та симпозіумів
+              .doc-about__row
+                .doc-about__item 43
+                .doc-about__item друковані роботи, з них 25 опубліковані закордоном
+
+            .doc-about__block
+              .doc-about__title.title-32 Членство в Асоціаціях
+              ul.doc-about__ul.ul-list.ul-list--dark
+                li <strong>Українська гастроентерологічна асоціація (УГА)</strong>
+                li <strong>European Association for the Study of the Liver (EASL)</strong>
+              p.doc-about__text Паралельно з клінічним досвідом займаюсь наукою та активно презентую свої наукові здобутки на міжнародних та українських конференціях. Основним напрямком наукової діяльності є гепатологія (вивчення захворювань печінки) та мікробіом кишківника. Стежу за всіма сучасними міжнародними рекомендаціями та протоколами, активно впроваджую новітні дослідження у клінічний досвід клініки Gastro Life
+          //end doc__about
+
+          //begin doc__facts
+          .doc__facts.doc-facts
+            .doc-facts__block
+              .doc-about__title.title-32 Цікавий професійний факт про себе
+              p.doc-about__text Не уявляю у своєму клінічному досвіді відсутність наукової основи, оскільки саме це дозволяє глибше розбиратися у причинах хвороб. Активно презентую свої роботи на конференціях та у статтях. Обмінююсь досвідом з колегами-гастроентерологами.
+              .doc-about__subtitle.title-24 З найяскравіших вражень
+              ol.ol-list.doc-about__ol
+                li Виступ та нагорода за найкращу наукову роботу на міжнародній конференції "East meets West: Functional meets organics" у Сінгапурі у 2019 році
+                li Конференція "Актуальні питання діагностики, лікування та профілактики органів травлення у сучасній гастроентерології та дієтології". Захід, організований мною та командою однодумців, відбувся у 2019 році у Львові. Конференцію за участю найкращих гастроентерологів України відвідали близько 350 учасників
+              .doc-about__title.title-32 Цікавий особистий факт про себе
+              p.doc-about__text Ентузіаст, закохана у свою спеціальність, надихаюсь людьми та їх історіями. Вірю у те, що якщо людина чогось дуже хоче – весь Всесвіт допомагає у здійсненні мрій
+          //end doc__facts
+
+          //begin doc__service
+          .doc__service.doc-service
+            .doc-about__title.title-32 Перелік послуг
+            ul.doc-service__list.ul-list-2
+              li.doc-service__item
+                a(href="#").doc-service__link Консультація провідного гастроентеролога
+              li.doc-service__item
+                a(href="#").doc-service__link Повторна консультація провідного гастроентеролога
+              li.doc-service__item
+                .doc-service__link Програма відновлення дефіциту вітамінів та мікронутрієнтів
+              li.doc-service__item
+                a(href="#").doc-service__link Програма відновлення печінки
+              li.doc-service__item
+                .doc-service__link Програма відновлення мікробіому кишківника
+              li.doc-service__item
+                .doc-service__link Програма "Анти-холестерин"
+          //end doc__service
+
+      //end doc
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts
